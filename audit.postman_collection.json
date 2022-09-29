@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "9e57c3ce-8765-41a9-aa66-65f32f41a2dd",
+		"name": "audit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delete Person",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add person",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Abdelkarim LAHBABI\",\n\t\"age\" : 20\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/savePerson",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"savePerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit person",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Abdelkarim LAHBABI\",\n\t\"age\" : 20\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9090/updatePerson/1/karim",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"updatePerson",
+						"1",
+						"karim"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
